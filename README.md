@@ -26,3 +26,28 @@ public:
 
 
 ```
+
+
+
+### Boolean 1-10 (WEEK 3) 
+- Clаss `Boolean_1` для удобства
+    - внутри `boolean_1.cpp` все задачи от 1 до 10)
+
+```cpp
+class Program {
+public:
+    void begin1() {
+        //Периметр квадрата
+        double a;
+        double P;
+        out << "Сторона квадрата (a): ";
+        in >> a;
+        P = a * 4;
+        out << "Периметр квадрата (P): " << P << nl;
+    }
+};
+
+
+```
+
+> Проверка чисел на истенность и равенство используя 'bool' and 'if-else'
