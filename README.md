@@ -1,3 +1,5 @@
+<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=200&section=header&text=24-03%20Univer%20Tasks!&fontSize=50" />
+
 # University Tasks
 ---
 
