@@ -228,7 +228,89 @@ public:
     std::cout << A << " в степени " << N << " равно: " << result << std::endl;
 	}
 
+    // For16 — степени числа A
+    void taskNum16() {
+    double A;
+    int N;
+    cout << "A N: ";
+    cin >> A >> N;
 
+    double power = 1;
+    for (int i = 1; i <= N; i++) {
+    power = power * A;
+    cout << power << endl;
+    }
+ 
+    }
+
+    // For17 — сумма 1 + A + A^2 + ... + A^N
+    void taskNum17() {
+        double A;
+        int N;
+        cout << "A N: ";
+        cin >> A >> N;
+
+        double sum = 1;
+        double power = 1;
+        for (int i = 1; i <= N; i++) {
+            power = power * A;
+            sum = sum + power;
+        }
+
+        cout << "Сумма = " << sum << endl;
+    }
+
+    // For18 — 1 − A + A^2 − A^3 + ... + (−1)^N * A^N
+    void taskNum18() {
+        double A;
+        int N;
+        cout << "A N: ";
+        cin >> A >> N;
+
+        double sum = 1;
+        double power = 1;
+        int sign = -1; // первый минус после 1
+
+        for (int i = 1; i <= N; i++) {
+            power = power * A;
+            sum = sum + sign * power;
+            sign = -sign; // меняем знак каждый раз
+        }
+
+        cout << "Результат = " << sum << endl;
+    }
+
+    // taskNum19 — факториал N
+    void taskNum19() {
+        int N;
+        cout << "N: ";
+        cin >> N;
+
+        double fact = 1;
+        for (int i = 1; i <= N; i++) {
+            fact = fact * i;
+        }
+
+        cout << "Факториал = " << fact << endl;
+    }
+
+
+    // For20 — сумма факториалов 1! + 2! + 3! + ... + N!
+    void taskNum20() {
+        int N;
+        cout << "N: ";
+        cin >> N;
+
+        double sum = 0;
+        double fact = 1;
+
+        for (int i = 1; i <= N; i++) {
+            fact *= i;   // накапливаем факториал
+            sum += fact; // прибавляем к сумме
+        }
+
+        cout << "Сумма факториалов = " << sum << endl;
+    }
 
 };
 
@@ -250,6 +332,11 @@ int main(){
 	p.taskNum13();
 	p.taskNum14();
 	p.taskNum15();
+    p.taskNum16();
+    p.taskNum17();
+    p.taskNum18();
+    p.taskNum19();
+    p.taskNum20();
 
 
 	return 0;
